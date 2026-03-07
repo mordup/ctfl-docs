@@ -1,0 +1,50 @@
+site_name: CTFL — Claude Tracker For Linux
+site_url: https://ctfl.md-labs.dev
+site_description: A lightweight Linux system tray app to monitor your Claude token usage and rate limits.
+repo_url: https://github.com/mordup/ctfl
+repo_name: mordup/ctfl
+
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: assets/images/ctfl.svg
+  logo: assets/images/ctfl.svg
+  palette:
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Getting Started: getting-started.md
+  - Configuration: configuration.md
+  - Data Sources: data-sources.md
+  - Updating: updating.md
+  - Compatibility: compatibility.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables

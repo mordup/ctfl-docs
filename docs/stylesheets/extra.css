@@ -1,0 +1,4 @@
+/* Slightly tighter content width */
+.md-grid {
+  max-width: 960px;
+}
