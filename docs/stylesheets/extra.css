@@ -20,13 +20,15 @@
   --md-accent-fg-color: #d97706;
 }
 
-/* Header logo and title — dark to contrast with orange bar */
-.md-header .md-header__title {
+/* Clickable site name in header */
+.md-header__home-link {
   color: #431407;
+  text-decoration: none;
+  font-weight: 700;
 }
-.md-header .md-header__button.md-logo img,
-.md-header .md-header__button.md-logo svg {
-  filter: brightness(0) saturate(100%) invert(10%) sepia(60%) saturate(2000%) hue-rotate(15deg);
+.md-header__home-link:hover {
+  text-decoration: none;
+  opacity: 0.8;
 }
 
 /* Search bar — brighter default, even brighter on hover */

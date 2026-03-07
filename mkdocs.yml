@@ -30,6 +30,7 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+
 nav:
   - Home: index.md
   - Installation: installation.md
