@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ctfl.md-labs.dev/sitemap.xml
