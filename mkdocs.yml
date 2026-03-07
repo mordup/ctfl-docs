@@ -11,14 +11,14 @@ theme:
   logo: assets/images/ctfl.svg
   palette:
     - scheme: slate
-      primary: deep purple
-      accent: purple
+      primary: custom
+      accent: orange
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
     - scheme: default
-      primary: deep purple
-      accent: purple
+      primary: custom
+      accent: orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
