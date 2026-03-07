@@ -1,4 +1,4 @@
-site_name: CTFL — Claude Tracker For Linux
+site_name: CTFL
 site_url: https://ctfl.md-labs.dev
 site_description: A lightweight Linux system tray app to monitor your Claude token usage and rate limits.
 repo_url: https://github.com/mordup/ctfl
