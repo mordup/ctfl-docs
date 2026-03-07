@@ -2,3 +2,39 @@
 .md-grid {
   max-width: 960px;
 }
+
+/* Orange theme overrides */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #f97316;
+  --md-primary-fg-color--light: #fb923c;
+  --md-primary-fg-color--dark: #ea580c;
+  --md-primary-bg-color: #1a1a2e;
+  --md-accent-fg-color: #f59e0b;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ea580c;
+  --md-primary-fg-color--light: #f97316;
+  --md-primary-fg-color--dark: #c2410c;
+  --md-primary-bg-color: #fff;
+  --md-accent-fg-color: #d97706;
+}
+
+/* Header logo and title — dark to contrast with orange bar */
+.md-header .md-header__title {
+  color: #431407;
+}
+.md-header .md-header__button.md-logo img,
+.md-header .md-header__button.md-logo svg {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(60%) saturate(2000%) hue-rotate(15deg);
+}
+
+/* Search bar — brighter default, even brighter on hover */
+@media screen and (min-width: 60em) {
+  .md-search__form {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  .md-search__form:hover {
+    background-color: rgba(255, 255, 255, 0.32) !important;
+  }
+}
