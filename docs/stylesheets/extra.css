@@ -13,16 +13,16 @@
 }
 
 [data-md-color-scheme="default"] {
-  --md-primary-fg-color: #ea580c;
-  --md-primary-fg-color--light: #f97316;
-  --md-primary-fg-color--dark: #c2410c;
-  --md-primary-bg-color: #fff;
+  --md-primary-fg-color: #f97316;
+  --md-primary-fg-color--light: #fb923c;
+  --md-primary-fg-color--dark: #ea580c;
+  --md-primary-bg-color: #fff5eb;
   --md-accent-fg-color: #d97706;
 }
 
 /* Clickable site name in header */
 .md-header__home-link {
-  color: #431407;
+  color: var(--md-primary-bg-color);
   text-decoration: none;
   font-weight: 700;
 }
