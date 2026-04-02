@@ -14,7 +14,8 @@ When an update is found, the tray menu item changes from "Check for Updates" to 
 |---|---|
 | **pip** | Downloads the new `.whl` and runs `pip install --upgrade`. Restarts automatically. |
 | **AppImage** | Downloads the new AppImage and replaces the current one in place. Restarts automatically. |
-| **System package** (deb/rpm/pacman) | Opens the GitHub release page in your browser so you can download the new package. |
+| **AUR** (Arch Linux) | Update through your AUR helper: `yay -Syu ctfl` |
+| **System package** (deb/rpm) | Opens the GitHub release page in your browser so you can download the new package. |
 
 ## Manual check
 
