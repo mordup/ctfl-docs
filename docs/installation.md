@@ -26,20 +26,26 @@ Or install from the `.whl` file on the releases page:
 pip install ctfl-*.whl
 ```
 
-## Arch Linux
+## Arch Linux (AUR)
 
-Download the `.pkg.tar.zst` from the [Releases](https://github.com/mordup/ctfl/releases/latest) page:
+Install from the [AUR](https://aur.archlinux.org/packages/ctfl) using your preferred helper:
+
+```bash
+yay -S ctfl
+```
+
+Or manually:
+
+```bash
+git clone https://aur.archlinux.org/ctfl.git
+cd ctfl
+makepkg -si
+```
+
+Alternatively, download the `.pkg.tar.zst` from the [Releases](https://github.com/mordup/ctfl/releases/latest) page:
 
 ```bash
 sudo pacman -U ctfl-*-any.pkg.tar.zst
-```
-
-Or build from source:
-
-```bash
-git clone https://github.com/mordup/ctfl.git
-cd ctfl
-makepkg -si
 ```
 
 ## Debian / Ubuntu
