@@ -34,7 +34,20 @@ To see plan utilization from claude.ai, you can provide cookies from your browse
 | **CF Clearance** | The `cf_clearance` cookie value |
 
 !!! note
-    If you use Claude Code, CTFL automatically reads your OAuth token from `~/.claude/.credentials.json`. The session key fields are an alternative for users who don't use Claude Code.
+    If you use Claude Code, CTFL automatically reads your OAuth token from the `.credentials.json` file in the active [profile](#profile). The session key fields are an alternative for users who don't use Claude Code.
+
+## Profile
+
+If you manage multiple Claude accounts through [CCS](https://github.com/kaitranntt/ccs), CTFL shows a **Profile** submenu under the tray icon (right-click) listing every instance it finds under `~/.ccs/instances/*/` plus the legacy `~/.claude/` directory.
+
+| Option | Behavior |
+|---|---|
+| **Auto-detect** | Follows the profile currently in use. CTFL reads `CLAUDE_CONFIG_DIR` from any running `claude` process and falls back to the instance with the most recent activity when nothing is running. |
+| *Named instance* (e.g. `personal`, `work`) | Pins CTFL to that profile. Auto-detection is disabled until you switch back to Auto. |
+
+The tooltip header shows the active profile when more than one is discovered, marking auto-detection with `(auto)` so you always know which profile's data you're looking at.
+
+The submenu only appears when CTFL finds more than one instance. If you use a single `~/.claude/` directory, nothing changes.
 
 ## Tooltip Info
 

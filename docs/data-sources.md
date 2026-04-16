@@ -12,6 +12,17 @@ Provides:
 - Per-project and per-model breakdowns
 - Cost estimates (optional, based on public pricing)
 
+### Multi-account setups (CCS)
+
+If you use [CCS](https://github.com/kaitranntt/ccs) to juggle several Claude accounts, CTFL discovers each instance under `~/.ccs/instances/*/` alongside the legacy `~/.claude/` directory and lets you switch between them.
+
+By default CTFL **auto-detects** the active profile:
+
+1. Scans running `claude` processes for `CLAUDE_CONFIG_DIR` — so whichever profile you just launched wins.
+2. Falls back to the instance with the most recent JSONL activity when no session is running.
+
+You can also pin a specific profile via the tray menu (**Right-click → Profile**). See [Configuration → Profile](configuration.md#profile).
+
 ## Admin API
 
 Fetches organization-level usage from the [Anthropic Admin API](https://docs.anthropic.com/en/docs/administration/admin-api). Requires an admin API key.
@@ -33,9 +44,9 @@ Merges data from local logs and the Admin API. Use this to get the most complete
 
 ## OAuth / Rate limits
 
-CTFL also reads your Claude Code OAuth credentials from `~/.claude/.credentials.json` to fetch plan utilization (session and weekly limits) directly from `claude.ai`.
+CTFL reads your Claude Code OAuth credentials (`.credentials.json` inside the active profile directory) to fetch plan utilization (session and weekly limits) directly from `claude.ai`.
 
-This happens automatically if you're logged into Claude Code — no configuration needed. Token refresh is handled transparently.
+This happens automatically if you're logged into Claude Code — no configuration needed. Token refresh is handled transparently. When you switch profiles, CTFL re-reads credentials from the newly selected instance, so the utilization you see always matches the account you're currently using.
 
 The rate limit data appears in:
 
