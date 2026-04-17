@@ -44,7 +44,7 @@ Merges data from local logs and the Admin API. Use this to get the most complete
 
 ## OAuth / Rate limits
 
-CTFL reads your Claude Code OAuth credentials (`.credentials.json` inside the active profile directory) to fetch plan utilization (session and weekly limits) directly from `claude.ai`.
+CTFL reads your Claude Code OAuth credentials (`.credentials.json` inside the active profile directory) to fetch plan utilization directly from `claude.ai`. Pro and Max plans expose session (5-hour) and weekly windows; Enterprise plans expose a monthly spend window instead, shown as used / cap credits.
 
 This happens automatically if you're logged into Claude Code — no configuration needed. Token refresh is handled transparently. When you switch profiles, CTFL re-reads credentials from the newly selected instance, so the utilization you see always matches the account you're currently using.
 

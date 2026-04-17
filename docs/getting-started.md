@@ -31,6 +31,8 @@ The popup shows your token usage in several views:
 
 Long lists scroll inside the tab instead of stretching the popup off-screen, so raising **Days to show** in Settings is safe.
 
+Above the charts, the popup surfaces plan rate-limit bars fetched from `claude.ai`. Pro and Max plans show session (5-hour) and weekly bars; Enterprise plans show a monthly spend bar with used / cap credits. The same figures appear in the tooltip when it is enabled.
+
 ### Long-context usage hint
 
 When recent activity is dominated by large conversations, the popup surfaces a hint under the period total, for example:
