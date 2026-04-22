@@ -31,7 +31,11 @@ The popup shows your token usage in several views:
 
 Long lists scroll inside the tab instead of stretching the popup off-screen, so raising **Days to show** in Settings is safe.
 
-Above the charts, the popup surfaces plan rate-limit bars fetched from `claude.ai`. Pro and Max plans show session (5-hour) and weekly bars; Enterprise plans show a monthly spend bar with used / cap credits. The same figures appear in the tooltip when it is enabled.
+Above the charts, the popup surfaces plan rate-limit bars fetched from `claude.ai`. Pro and Max plans show a session (5-hour) bar and one bar per weekly bucket — currently **All models**, **Sonnet**, and **Claude Design** — each with its own reset timestamp. Enterprise plans show a monthly spend bar with used / cap credits instead. The same figures appear in the tooltip when it is enabled.
+
+![Rate-limit section of the popup](assets/images/rate_limits.png){ width="480" }
+
+Buckets you haven't used yet (for example, Claude Design before first use) show **Not used yet** in place of a reset time, and are omitted from the compact tray tooltip.
 
 ### Long-context usage hint
 
