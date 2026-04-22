@@ -53,3 +53,5 @@ The rate limit data appears in:
 - The tooltip (if enabled)
 - The usage popup's rate limits section
 - Desktop notifications when utilization exceeds the configured threshold
+
+![Enterprise tray tooltip — monthly spend only](assets/images/tray_enterprise.png){ width="380" }
