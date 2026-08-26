@@ -44,7 +44,7 @@ Merges data from local logs and the Admin API. Use this to get the most complete
 
 ## OAuth / Rate limits
 
-CTFL reads your Claude Code OAuth credentials (`.credentials.json` inside the active profile directory) to fetch plan utilization directly from `claude.ai`. Pro and Max plans expose a session (5-hour) window and multiple weekly windows (All models, Sonnet, Claude Design), each with its own reset time; Enterprise plans expose a monthly spend window instead, shown as used / cap credits.
+CTFL reads your Claude Code OAuth credentials (`.credentials.json` inside the active profile directory) to fetch plan utilization directly from `claude.ai`. Pro and Max plans expose a session (5-hour) window plus the weekly windows the API reports — All models, per-model buckets such as Fable, and Claude Design — each with its own reset time. A monthly spend window is exposed on any plan with usage credits configured, Enterprise included, and is shown as used / cap credits.
 
 This happens automatically if you're logged into Claude Code — no configuration needed. Token refresh is handled transparently. When you switch profiles, CTFL re-reads credentials from the newly selected instance, so the utilization you see always matches the account you're currently using.
 
@@ -54,4 +54,4 @@ The rate limit data appears in:
 - The usage popup's rate limits section
 - Desktop notifications when utilization exceeds the configured threshold
 
-![Enterprise tray tooltip — monthly spend only](assets/images/tray_enterprise.png){ width="380" }
+![Tray tooltip on an Enterprise plan, where monthly spend is the only window exposed](assets/images/tray_enterprise.png){ width="380" }

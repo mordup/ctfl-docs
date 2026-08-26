@@ -12,7 +12,7 @@ CTFL starts as a system tray icon.
 
 ## Basic interactions
 
-- **Left-click** the tray icon to toggle the usage popup
+- **Left-click** the tray icon to open the usage popup, or to bring it to the front if it is already open behind another window. Clicking again while it is in front closes it.
 - **Right-click** for the context menu (refresh, settings, check for updates, quit)
 - **Hover** over the icon to see a quick summary in the tooltip
 
@@ -29,9 +29,11 @@ The popup shows your token usage in several views:
 ![Daily usage](assets/images/usage_daily.png){ width="380" }
 ![Per-model usage](assets/images/usage_models.png){ width="380" }
 
-Long lists scroll inside the tab instead of stretching the popup off-screen, so raising **Days to show** in Settings is safe.
+Long lists scroll inside the tab instead of stretching the popup off-screen, so raising **Days to show** in Settings is safe. The first time it opens, the popup sizes itself to fit the tallest tab, so switching tabs never moves the window.
 
-Above the charts, the popup surfaces plan rate-limit bars fetched from `claude.ai`. Pro and Max plans show a session (5-hour) bar and one bar per weekly bucket — currently **All models**, **Sonnet**, and **Claude Design** — each with its own reset timestamp. Enterprise plans show a monthly spend bar with used / cap credits instead. The same figures appear in the tooltip when it is enabled.
+Above the charts, the popup surfaces plan rate-limit bars fetched from `claude.ai`. Pro and Max plans show a session (5-hour) bar plus one bar per weekly bucket the API reports, each with its own reset timestamp. **All models** is always present; alongside it you may see per-model buckets such as **Fable**, and **Claude Design** in its own section. The exact set follows your plan and what Anthropic exposes, so it changes over time without a CTFL update.
+
+A **monthly spend** bar appears whenever usage credits are configured — on Max and Pro as well as Enterprise — showing used / cap. It stays visible once credits are exhausted, which is precisely when the number matters. The same figures appear in the tooltip when it is enabled.
 
 ![Rate-limit section of the popup](assets/images/rate_limits.png){ width="480" }
 
