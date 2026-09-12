@@ -12,10 +12,10 @@ When an update is found, the tray menu item changes from "Check for Updates" to 
 
 | Install method | What happens |
 |---|---|
-| **pip** | Downloads the new `.whl` and runs `pip install --upgrade`. Restarts automatically. |
-| **AppImage** | Downloads the new AppImage and replaces the current one in place. Restarts automatically. |
-| **AUR** (Arch Linux) | Update through your AUR helper: `yay -Syu ctfl` |
-| **System package** (deb/rpm) | Opens the GitHub release page in your browser so you can download the new package. |
+| **pip** | Downloads the new `.whl` and runs `pip install --upgrade`, then asks whether to restart now. |
+| **AppImage** | Downloads the new AppImage and replaces the current one in place, then asks whether to restart now. |
+| **AUR** (Arch Linux) | Update through your AUR helper: `yay -Syu ctfl`. Within a minute the tray notifies you and the menu entry becomes **Restart to use vX.Y.Z**. |
+| **System package** (deb/rpm) | Opens the GitHub release page in your browser so you can download the new package. Once it is installed, the tray offers a restart the same way as for AUR. |
 
 ## Manual check
 
