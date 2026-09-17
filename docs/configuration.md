@@ -18,7 +18,7 @@ Choose where CTFL reads token usage data. See [Data Sources](data-sources.md) fo
 
 | Setting | Default | Description |
 |---|---|---|
-| **Days to show** | 7 | Number of days shown in the usage popup (1–90) |
+| **Days to show** | 7 | Number of days shown in the usage popup (1–30) |
 | **Show token breakdown** | On | Show input/output token split in bar charts |
 | **Estimate costs from local data** | Off | Calculate costs from local logs using public pricing |
 | **Auto-refresh** | On | Periodically refresh usage data |

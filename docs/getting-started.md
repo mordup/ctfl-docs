@@ -47,7 +47,7 @@ When recent activity is dominated by large conversations, the popup surfaces a h
 
 Each message you send to Claude re-includes the whole conversation. Once the context passes ~150k tokens, each further reply is much more expensive — even with prompt caching. If you see this hint, running `/compact` mid-task or `/clear` when switching to unrelated work significantly reduces rate-limit burn.
 
-The hint is computed over recent (JSONL-logged) sessions, not the full displayed period — older data aggregated by Claude Code's stats cache doesn't include per-message context size, so only the recent window can be measured.
+The hint is computed from the conversation logs Claude Code still keeps on disk. With **Days to show** capped at 30, that is normally the whole displayed period; a day whose logs Claude Code has already cleaned up is left out of the measurement.
 
 ## Next steps
 
