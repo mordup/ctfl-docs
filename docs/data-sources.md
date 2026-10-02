@@ -12,6 +12,12 @@ Provides:
 - Per-project and per-model breakdowns
 - Cost estimates (optional, based on public pricing)
 
+### History
+
+Claude Code deletes its conversation files after 30 days, so the logs alone can't cover a full previous month. CTFL therefore keeps its own copy of each finished day's token totals (per model and per project, no conversation content) in `~/.cache/ctfl/`. It does this for every profile it finds, and drops days older than the first of the previous month.
+
+Days from before you started using a CTFL version with this history show only what Claude Code still has: recent days in full, older ones as totals without cost, if at all.
+
 ### Multi-account setups (CCS)
 
 If you use [CCS](https://github.com/kaitranntt/ccs) to juggle several Claude accounts, CTFL discovers each instance under `~/.ccs/instances/*/` alongside the legacy `~/.claude/` directory and lets you switch between them.

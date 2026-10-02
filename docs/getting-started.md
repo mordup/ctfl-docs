@@ -21,7 +21,7 @@ CTFL starts as a system tray icon.
 
 ## Usage popup
 
-Pick a period in the dropdown under the plan limits: **Today**, **This week** or **This month**. Its total sits next to the dropdown, and the three tabs cover that period:
+Pick a period type in the dropdown under the plan limits: **Day**, **Week** or **Month**. The arrows beside it step back to earlier periods and forward again, and the name between them says which one is shown: *Yesterday*, *Last week*, *September*… The period's total sits next to the arrows, and the three tabs cover that period:
 
 - **Usage** — tokens per day
 - **By Model** — breakdown by Claude model
@@ -30,7 +30,7 @@ Pick a period in the dropdown under the plan limits: **Today**, **This week** or
 ![Daily usage](assets/images/usage_daily.png){ width="380" }
 ![Per-model usage](assets/images/usage_models.png){ width="380" }
 
-The week starts on your locale's first day of the week, and CTFL remembers the period you picked. With **Estimate costs from local data** turned on in [Settings](configuration.md#display), the total, each day and each model also show an estimated cost at API list prices.
+The week starts on your locale's first day of the week. CTFL remembers the period type you picked, and the popup always opens on the current period. You can go back as far as the first day of the previous month (see [History](data-sources.md#history)). With **Estimate costs from local data** turned on in [Settings](configuration.md#display), the total, each day and each model also show an estimated cost at API list prices.
 
 The popup sizes itself to its content: the list shows three to seven rows and scrolls beyond that, so the window cannot be resized, and switching tabs never changes its size. It is an ordinary window, so it stays open when you click another application.
 
